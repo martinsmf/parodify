@@ -2,5 +2,5 @@
 
 ## Capybara, ruby e cucumber
 
-	- Curso QAninja Week
+- Curso QAninja Week
 
