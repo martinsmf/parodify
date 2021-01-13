@@ -7,11 +7,11 @@ Feature: Cadastro de usuário
         @happy
         Scenario: cadastro
             Given que acesso a página de cadastro
-             When submeto o meu cadastro com:
-                  | email          | matheus@gmail.com |
-                  | senha          | abc123            |
-                  | confirma_senha | abc123            |
+             When submeto o meu cadastro com <email> <senha> <confirma_senha>
              Then devo ser direcionado para área logada
+        Examples:
+                  | email                   | senha    | confirma_senha |
+                  | "teste.teste@gmail.com" | "abc123" | "abc123"       |
 
         Scenario: Email não informado
             Given que acesso a página de cadastro

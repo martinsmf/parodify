@@ -3,11 +3,11 @@ Given('que acesso a página de cadastro') do
   
 end
 
-When('submeto o meu cadastro com:') do |table|
-  @cadastro_page.cadastrar
+When('submeto o meu cadastro com {string} {string} {string}') do |email, senha, confirma_senha|
+  @cadastro_page.cadastrar(email, senha, confirma_senha)
   sleep 3
 end
 
 Then('devo ser direcionado para área logada') do
-  pending # Write code here that turns the phrase above into concrete actions
+    expect(page).to have_css '.dashboard'
 end
