@@ -9,9 +9,10 @@ Given("que eu gosto muito de {string}") do |cat|
 end
 
 When("toco a seguinte canção:") do |table|
-  parodi = table.rows_hash
+  @parody = table.rows_hash
+  @areaLogada_page.selecionaBanda(@parody[:banda], @parody[:parodia])
 end
 
 Then("essa paródia deve ficar em modo de reprodução") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@areaLogada_page.reproduzindo).to have_text @parody[:parodia]
 end
