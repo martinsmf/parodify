@@ -7,7 +7,7 @@ require_relative "helpers.rb"
 World(Helpers)
 
 Capybara.configure do |config|
-  config.default_driver = :selenium_chrome
+  config.default_driver = :selenium_chrome_headless
   config.app_host = "http://parodify.qaninja.com.br"
   config.default_max_wait_time = 10
 end
