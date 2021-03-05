@@ -1,3 +1,4 @@
 logs
 Gemfile.lock
 .vscode
+debug.log
