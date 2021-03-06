@@ -2,7 +2,7 @@
 ### QA NINJA
 ###
 
-FROM ruby:2.7.2-stretch
+FROM ruby:2.6.5-stretch
 
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/90qaninja \
   && echo 'DPkg::Options "--force-confnew";' >> /etc/apt/apt.conf.d/90qaninja
