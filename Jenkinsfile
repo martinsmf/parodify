@@ -17,15 +17,11 @@ pipeline{
             steps{
                 echo 'Runing regression tests'
                 sh 'bundle exec cucumber'
-            }
-        }
-        stage('reports'){
-            steps{
                 echo 'logs reports'
                 script{
                     allure includeProperties: false,
                      jdk: '',
-                     results: [[path: ' logs/']]
+                     results: [[path: ' logs']]
                 }
             }
         }
