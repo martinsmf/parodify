@@ -5,6 +5,7 @@ Feature: Login
              Quero acessar o sistema com meu email e senha 
              Para que eu possa ter acesso as playists do Parodify
         
+        @smoke
         Scenario: Login do usuário
 
             Given que acesso a página de login

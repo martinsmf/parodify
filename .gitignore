@@ -1,4 +1,6 @@
-logs
+logs/screenshot
+logs/*.json
+logs/*.html
 Gemfile.lock
 .vscode
 debug.log
