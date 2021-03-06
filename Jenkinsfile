@@ -18,12 +18,16 @@ pipeline{
                 echo 'Runing regression tests'
                 sh 'bundle exec cucumber'
                 echo 'logs reports'
-                script{
+            }
+            post {
+                always {
+                    script{
                     allure includeProperties: false, 
                     jdk: '',
                     properties: [[key: 'allure.issues.tracker.pattern', 
                     value: 'http://tracker.company.com']],
                     results: [[path: 'logs']]
+                    }
                 }
             }
         }
