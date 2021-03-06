@@ -19,9 +19,11 @@ pipeline{
                 sh 'bundle exec cucumber'
                 echo 'logs reports'
                 script{
-                    allure includeProperties: false,
-                     jdk: '',
-                     results: [[path: ' logs']]
+                    allure includeProperties: false, 
+                    jdk: '',
+                    properties: [[key: 'allure.issues.tracker.pattern', 
+                    value: 'http://tracker.company.com']],
+                    results: [[path: 'allure-results']]
                 }
             }
         }
