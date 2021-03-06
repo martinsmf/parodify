@@ -23,7 +23,7 @@ pipeline{
                     jdk: '',
                     properties: [[key: 'allure.issues.tracker.pattern', 
                     value: 'http://tracker.company.com']],
-                    results: [[path: 'logs']]
+                    results: [[path: 'allure-report']]
                 }
             }
         }

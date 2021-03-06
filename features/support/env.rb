@@ -13,6 +13,6 @@ Capybara.configure do |config|
 end
 
 AllureCucumber.configure do |config|
-  config.results_directory = "/logs"
+  config.results_directory = "/allure-report"
   config.clean_results_directory = true
 end
