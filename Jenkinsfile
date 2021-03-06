@@ -19,6 +19,16 @@ pipeline{
                 sh 'bundle exec cucumber'
             }
         }
+        stage('reports'){
+            steps{
+                echo 'logs reports'
+                script{
+                    allure includeProperties: false,
+                     jdk: '',
+                     results: [[path: ' logs/']]
+                }
+            }
+        }
         stage('UAT'){
             steps{
                 echo 'Wait for user Acceptance'
