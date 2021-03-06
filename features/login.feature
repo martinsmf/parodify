@@ -11,7 +11,7 @@ Feature: Login
             Given que acesso a página de login
              When submento minhas credenciais com: "maistheus@gmail.com" e "abc123"
              Then devo ser direcionado para área logada
-
+        
         Scenario Outline: Scenario Outline name
             Given que acesso a página de login
              When submento minhas credenciais com: <email> e <senha>
